@@ -120,8 +120,8 @@ class SignUp extends StatelessWidget {
                               controller: passwordcont2,
                               type: TextInputType.visiblePassword,
                               validate: (s) {
-                                if (s!.isEmpty)
-                                  return 'enter the password pls ';
+                                if (s != passwordcont.text)
+                                  return 'the password isn\'t similar ';
                               }),
                           SizedBox(
                             height: 20.0,
@@ -137,7 +137,7 @@ class SignUp extends StatelessWidget {
                                           email: emailcont.text,
                                           password: passwordcont.text,
                                           name: namecont.text,
-                                          phone: phonecont.value);
+                                          phone: phonecont.text);
                                     }
                                   },
                                   text: 'SIGN UP')
