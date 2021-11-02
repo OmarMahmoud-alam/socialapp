@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:socialapp/pages/signin/loginState.dart';
 import 'package:socialapp/shared/sharedwadget.dart';
-
+import 'package:socialapp/shared/cache.dart';
 
 class CubitLogin extends Cubit<LoginState> {
   CubitLogin() : super(InitLogState());
@@ -21,7 +21,8 @@ class CubitLogin extends Cubit<LoginState> {
         .then((value) {
       print(value.user!.uid);
       toast(txt: value.user!.email ?? 'error');
-      emit(SocialLoginSuccessState());
+      CacheHelper.saveData( key: 'UserUid', value: value.user!.uid);
+      emit(SocialLoginSuccessState(value.user!.uid));
     }).catchError((e) {
       print(e.toString());
       emit(SocialLoginFailState());

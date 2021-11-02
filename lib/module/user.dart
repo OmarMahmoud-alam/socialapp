@@ -1,33 +1,30 @@
 class SocialUserModel {
-  late String name;
-  late String email;
-  late String phone;
-  late String uId;
-  //String image;
-  //String cover;
-  //String bio;
-  //bool isEmailVerified;
+  String? name;
+  String? email;
+  String? phone;
+  String? uId;
+  String? image;
+  String? cover;
+  String? bio;
 
   SocialUserModel({
-    required this.email,
-    required this.name,
-    required this.phone,
-    required this.uId,
-    // this.image,
-    //this.cover,
-    // this.bio,
-    //this.isEmailVerified,
+    this.email,
+    this.name,
+    this.phone,
+    this.uId,
+    this.image,
+    this.cover,
+    this.bio,
   });
 
-  SocialUserModel.fromJson(Map<String, dynamic> json) {
-    email = json['email'];
-    name = json['name'];
-    phone = json['phone'];
-    uId = json['uId'];
-    // image = json['image'];
-    // cover = json['cover'];
-    // bio = json['bio'];
-    // isEmailVerified = json['isEmailVerified'];
+  SocialUserModel.fromJson(Map<String, dynamic>? json) {
+    email = json!['email'] ?? '';
+    name = json['name'] ?? '';
+    phone = json['phone'] ?? '';
+    uId = json['uId'] ?? '';
+    image = json['image'] ?? '';
+    cover = json['cover'] ?? '';
+    bio = json['bio'] ?? '';
   }
 
   Map<String, dynamic> toMap() {
@@ -36,10 +33,9 @@ class SocialUserModel {
       'email': email,
       'phone': phone,
       'uId': uId,
-      // 'image':image,
-      // 'cover':cover,
-      // 'bio':bio,
-      // 'isEmailVerified':isEmailVerified,
+      'image': image,
+      'cover': cover,
+      'bio': bio,
     };
   }
 }
