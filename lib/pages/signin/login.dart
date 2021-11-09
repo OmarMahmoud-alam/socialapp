@@ -36,7 +36,7 @@ class Sign extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Login in'.toUpperCase(),
+                        'Log in'.toUpperCase(),
                         style: Theme.of(context).textTheme.headline3!.copyWith(
                             fontWeight: FontWeight.bold, fontSize: 40.0),
                       ),
@@ -44,7 +44,7 @@ class Sign extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        'Login to our browser the hot offers ',
+                        'Log in to our browser the hot offers ',
                         style: Theme.of(context)
                             .textTheme
                             .headline3!
@@ -90,7 +90,7 @@ class Sign extends StatelessWidget {
                                   password: passwordcont.text);
                             }
                           },
-                          text: 'LOGIN IN'),
+                          text: 'LOG IN'),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
