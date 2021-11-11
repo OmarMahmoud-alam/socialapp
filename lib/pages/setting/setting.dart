@@ -63,7 +63,12 @@ class Settingapp extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     top: 30.0, left: 17.0),
-                                child: Icon(Icons.arrow_back_ios, size: 30.0),
+                                child: IconButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    icon:
+                                        Icon(Icons.arrow_back_ios, size: 30.0)),
                               ),
                             ),
                             Align(

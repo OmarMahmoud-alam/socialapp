@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:socialapp/pages/setting/setting.dart';
+import 'package:socialapp/pages/mainchat/chat.dart';
 import 'package:socialapp/pages/signin/login.dart';
 import 'package:socialapp/shared/cache.dart';
 import 'package:socialapp/shared/data.dart';
@@ -25,6 +25,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: uid == null ? Sign() : Setting());
+        home: uid == null ? Sign() : MainChat());
   }
 }

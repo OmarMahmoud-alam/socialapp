@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:socialapp/pages/mainchat/chat.dart';
 import 'package:socialapp/pages/setting/setting.dart';
 import 'package:socialapp/pages/signin/cubitlogin.dart';
 import 'package:socialapp/pages/signin/loginState.dart';
@@ -20,7 +21,7 @@ class Sign extends StatelessWidget {
           Navigator.pushAndRemoveUntil<void>(
             context,
             MaterialPageRoute<void>(
-                builder: (BuildContext context) => Setting()),
+                builder: (BuildContext context) => MainChat()),
             ModalRoute.withName('/'),
           );
         }
