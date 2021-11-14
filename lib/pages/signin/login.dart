@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:socialapp/pages/mainchat/chat.dart';
 import 'package:socialapp/pages/setting/setting.dart';
 import 'package:socialapp/pages/signin/cubitlogin.dart';
 import 'package:socialapp/pages/signin/loginState.dart';
@@ -20,7 +21,7 @@ class Sign extends StatelessWidget {
           Navigator.pushAndRemoveUntil<void>(
             context,
             MaterialPageRoute<void>(
-                builder: (BuildContext context) => Setting()),
+                builder: (BuildContext context) => MainChat()),
             ModalRoute.withName('/'),
           );
         }
@@ -36,7 +37,7 @@ class Sign extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Login in'.toUpperCase(),
+                        'Log in'.toUpperCase(),
                         style: Theme.of(context).textTheme.headline3!.copyWith(
                             fontWeight: FontWeight.bold, fontSize: 40.0),
                       ),
@@ -44,7 +45,7 @@ class Sign extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        'Login to our browser the hot offers ',
+                        'Log in to our browser the hot offers ',
                         style: Theme.of(context)
                             .textTheme
                             .headline3!
@@ -90,7 +91,7 @@ class Sign extends StatelessWidget {
                                   password: passwordcont.text);
                             }
                           },
-                          text: 'LOGIN IN'),
+                          text: 'LOG IN'),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
