@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:socialapp/pages/learn.dart';
 import 'package:socialapp/pages/mainchat/chat.dart';
 import 'package:socialapp/pages/signin/login.dart';
 import 'package:socialapp/shared/cache.dart';
@@ -49,6 +50,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: uid == null ? Sign() : MainChat());
+        home: Nativeplate());
   }
 }
